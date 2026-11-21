@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://c1bmxxstyhan5"]
+
+[ext_resource type="Script" uid="uid://xe5pqkgxbffa" path="res://bounce.gd" id="1_6do1r"]
+[ext_resource type="AudioStream" uid="uid://bp8umowqsbv3c" path="res://jump.wav" id="2_bklnn"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_v38iq"]
+height = 0.69348145
+radius = 3.666504
+
+[node name="bounce" type="Area3D" unique_id=1374524211]
+script = ExtResource("1_6do1r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=282783793]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9869714, -24.515062, -0.23984861)
+shape = SubResource("CylinderShape3D_v38iq")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1504601225]
+stream = ExtResource("2_bklnn")
+volume_db = 17.313
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,113 @@
+[gd_scene format=3 uid="uid://b82cdyy3ltwx3"]
+
+[ext_resource type="Script" uid="uid://bm84tql8xx6tm" path="res://start.gd" id="1_1n0d2"]
+[ext_resource type="FontFile" uid="uid://bum37de7etsy4" path="res://Pikselator Wide.ttf" id="2_y5hus"]
+[ext_resource type="FontFile" uid="uid://cidyxpp7i1r7w" path="res://Square-Black.ttf" id="3_oiuna"]
+[ext_resource type="AudioStream" uid="uid://bvl5gi8f6ki2d" path="res://mixkit-mouse-click-close-1113.wav" id="4_y5hus"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4a3qj"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g38d0"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="START" type="Control" unique_id=218683914]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1n0d2")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1805212022]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 648.0
+color = Color(0.44755095, 0.44755095, 0.44755095, 1)
+
+[node name="Label3" type="Label" parent="ColorRect" unique_id=2111459871]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 359.0
+offset_top = 306.0
+offset_right = 1045.0
+offset_bottom = 369.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_y5hus")
+theme_override_font_sizes/font_size = 20
+text = "STILL IN PROGRESS"
+
+[node name="Label" type="Label" parent="." unique_id=789384813]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -380.0
+offset_top = -78.0
+offset_right = 382.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_fonts/font = ExtResource("2_y5hus")
+theme_override_font_sizes/font_size = 100
+text = "BOUNCY BASH"
+
+[node name="Button" type="Button" parent="." unique_id=2000565706]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -36.75
+offset_top = -1.0
+offset_right = 36.75
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0.9490196, 0.9490196, 1)
+theme_override_fonts/font = ExtResource("3_oiuna")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_4a3qj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g38d0")
+text = "PLAY"
+
+[node name="Button2" type="Button" parent="." unique_id=1053195129]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -41.0
+offset_top = 38.0
+offset_right = 42.0
+offset_bottom = 73.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0.9490196, 0.9490196, 1)
+theme_override_fonts/font = ExtResource("3_oiuna")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_4a3qj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g38d0")
+text = "GUIDE"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1722437909]
+stream = ExtResource("4_y5hus")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_pressed"]

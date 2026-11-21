@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://j2begg370cec"]
+
+[ext_resource type="Script" uid="uid://wm2aqmc7mft1" path="res://death.gd" id="1_qemge"]
+[ext_resource type="AudioStream" uid="uid://buxqryq2eyydh" path="res://death.mp3" id="2_lf77f"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lf77f"]
+size = Vector3(1, 1.6690674, 0.4736328)
+
+[node name="death" type="Area3D" unique_id=877740411]
+script = ExtResource("1_qemge")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=15466664]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3345337, -0.2631836)
+shape = SubResource("BoxShape3D_lf77f")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1668175560]
+stream = ExtResource("2_lf77f")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
