@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://c8rm24m10f6ix" path="res://player.tscn" id="1_y0xe8"]
 [ext_resource type="PackedScene" uid="uid://brm26ksqnh7xp" path="res://exit.tscn" id="2_r40rm"]
 [ext_resource type="PackedScene" uid="uid://j2begg370cec" path="res://death.tscn" id="3_6q4t8"]
+[ext_resource type="PackedScene" uid="uid://dl8hxl7aoipao" path="res://endscene.tscn" id="3_21xmu"]
 [ext_resource type="PackedScene" uid="uid://c1bmxxstyhan5" path="res://bounce.tscn" id="4_8tcn8"]
 [ext_resource type="PackedScene" uid="uid://b1s37psk7bp62" path="res://TreeStack.fbx" id="5_r6vdu"]
 
@@ -154,7 +155,7 @@ sides = 29
 material = SubResource("StandardMaterial3D_6q4t8")
 
 [node name="player" parent="." unique_id=617513422 instance=ExtResource("1_y0xe8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8523035, 3.212431, 59.89898)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3534379, 3.212431, 59.89898)
 
 [node name="Label3D" type="Label3D" parent="." unique_id=729787422]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.015054, 0)
@@ -169,6 +170,7 @@ font_size = 50
 [node name="exit" parent="." unique_id=1053329094 instance=ExtResource("2_r40rm")]
 transform = Transform3D(7, 0, 0, 0, 1, 0, 0, 0, 3, 6, 2, -7)
 material = SubResource("StandardMaterial3D_r6vdu")
+packed_scene = ExtResource("3_21xmu")
 
 [node name="death" parent="." unique_id=877740411 instance=ExtResource("3_6q4t8")]
 transform = Transform3D(55, 0, 0, 0, -2.4041265e-06, -55, 0, 55, -2.4041265e-06, -6.603673, -55.085697, 0)
@@ -181,3 +183,12 @@ transform = Transform3D(0.49969542, 0.017449748, 0, -0.017395956, 0.49815503, 0.
 
 [node name="TreeStack" parent="." unique_id=1723232132 instance=ExtResource("5_r6vdu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.553841, 0.9129598, 45.973938)
+
+[node name="Label3D3" type="Label3D" parent="." unique_id=1453376069]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.0734434, 53.142094)
+text = "go on to the end"
+
+[node name="Label3D4" type="Label3D" parent="." unique_id=110487406]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.0734434, 46.647884)
+text = "BOUNCE IN SOME PLACES
+"
