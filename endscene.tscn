@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://h2mkpsbj3gy7" path="res://endscene.gd" id="1_rl6ps"]
 [ext_resource type="FontFile" uid="uid://bum37de7etsy4" path="res://Pikselator Wide.ttf" id="2_wkqf8"]
 [ext_resource type="FontFile" uid="uid://cidyxpp7i1r7w" path="res://Square-Black.ttf" id="3_vrlff"]
-[ext_resource type="AudioStream" uid="uid://bvl5gi8f6ki2d" path="res://mixkit-mouse-click-close-1113.wav" id="4_mb1ob"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iyj2h"]
 bg_color = Color(1, 1, 1, 1)
@@ -60,6 +59,23 @@ theme_override_fonts/font = ExtResource("2_wkqf8")
 theme_override_font_sizes/font_size = 20
 text = "STILL IN PROGRESS"
 
+[node name="Label4" type="Label" parent="." unique_id=1923415911]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -143.0
+offset_top = 14.5
+offset_right = 143.0
+offset_bottom = 29.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_wkqf8")
+theme_override_font_sizes/font_size = 20
+text = "press space to restart"
+
 [node name="Label2" type="Label" parent="." unique_id=754162188]
 layout_mode = 1
 anchors_preset = 8
@@ -80,15 +96,15 @@ text = "COMPLETE!!"
 
 [node name="Button" type="Button" parent="." unique_id=1316138531]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = -1
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -42.375
-offset_top = 11.5
-offset_right = 42.375
-offset_bottom = 42.5
+anchor_bottom = 0.661
+offset_left = 582.0
+offset_top = 149.0
+offset_right = 666.75
+offset_bottom = 75.672
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -99,8 +115,5 @@ theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_iyj2h")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ci4ai")
 text = "START"
-
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=167892170]
-stream = ExtResource("4_mb1ob")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
